@@ -63,6 +63,78 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   ],
                 ),
               ),
+              SizedBox(height: 30),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: Text(
+                      "It's a Great Day for Coffee",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+                width: MediaQuery.of(context).size.width,
+                height: 60,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 50, 54, 56),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Find yor Coffee",
+                    hintStyle: TextStyle(
+                      color: Colors.white.withOpacity(0.5),
+                    ),
+                    //add search icon
+                    prefixIcon: Icon(
+                      Icons.search,
+                      size: 30,
+                      color: Colors.white.withOpacity(0.5),
+                    ),
+                  ),
+                ),
+              ),
+
+              TabBar(
+                  controller: _tabController,
+                  labelColor: Color(0xFFE57734),
+                  unselectedLabelColor: Colors.white.withOpacity(0.5),
+                  isScrollable: true,
+                  indicator: UnderlineTabIndicator(
+                    borderSide: BorderSide(
+                      width: 3,
+                      color: Color(0xFFE57734),
+                    ),
+                  ),
+                  tabs: [
+                Tab(
+                  text: "Hot Coffee"),
+                Tab(
+                  text: "Hot Coffee"),
+                Tab(
+                  text: "Hot Coffee"),
+                Tab(
+                  text: "Hot Coffee"),
+              ]),
+              SizedBox(height: 10),
+              Center(
+                child: [
+                  Container(color: Colors.red,),
+                  Container(color: Colors.red,),
+                  Container(color: Colors.red,),
+                  Container(color: Colors.red,),
+                ][_tabController.index],
+              ),
             ],
           ),
         ),
