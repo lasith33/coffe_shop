@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemsWidget extends StatelessWidget {
@@ -43,9 +44,63 @@ class ItemsWidget extends StatelessWidget {
                       "images/${img[i]}.jpg",
                       width: 120,
                       height: 120,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 ),
+                Padding(
+                    padding: EdgeInsets.only(bottom: 8),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      children: [
+                        Text(
+                          img[i],
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          "Best Coffe",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white60,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "\$30",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          CupertinoIcons.add,
+                          size: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  ),
               ],
             ),
           ),
