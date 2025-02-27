@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/items_widget.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -115,24 +117,28 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       width: 3,
                       color: Color(0xFFE57734),
                     ),
+                    insets: EdgeInsets.symmetric(horizontal: 16),
                   ),
+                  labelStyle:
+                  TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  labelPadding: EdgeInsets.symmetric(horizontal: 20),
                   tabs: [
                 Tab(
                   text: "Hot Coffee"),
                 Tab(
-                  text: "Hot Coffee"),
+                  text: "Cold Coffee"),
                 Tab(
-                  text: "Hot Coffee"),
+                  text: "Cappuiccino"),
                 Tab(
-                  text: "Hot Coffee"),
+                  text: "Americano"),
               ]),
               SizedBox(height: 10),
               Center(
                 child: [
-                  Container(color: Colors.red,),
-                  Container(color: Colors.red,),
-                  Container(color: Colors.red,),
-                  Container(color: Colors.red,),
+                  ItemsWidget(),
+                  ItemsWidget(),
+                  ItemsWidget(),
+                  ItemsWidget(),
                 ][_tabController.index],
               ),
             ],
