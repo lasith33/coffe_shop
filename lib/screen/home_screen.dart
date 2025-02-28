@@ -1,3 +1,4 @@
+import 'package:coffe_shop/widgets/home_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/items_widget.dart';
@@ -145,6 +146,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ),
         ),
       ),
+      bottomNavigationBar: HomeBottomBar(),
     );
   }
 }

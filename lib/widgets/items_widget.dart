@@ -1,3 +1,4 @@
+import 'package:coffe_shop/screen/single_item_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,9 @@ class ItemsWidget extends StatelessWidget {
             child: Column(
               children: [
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SingleItemScreen(img[i])));
+                  },
                   child: Container(
                     margin: EdgeInsets.all(10),
                     child: Image.asset(
@@ -96,6 +99,7 @@ class ItemsWidget extends StatelessWidget {
                         child: Icon(
                           CupertinoIcons.add,
                           size: 20,
+                          color: Colors.white,
                         ),
                       ),
                     ],
