@@ -1,4 +1,7 @@
+import 'package:coffe_shop/screen/home_screen.dart';
+import 'package:coffe_shop/screen/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
+
 
 class HomeBottomBar extends StatelessWidget {
   const HomeBottomBar({super.key});
@@ -21,25 +24,45 @@ class HomeBottomBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            Icons.home,
-            color: Colors.orange,
-            size: 35,
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            },
+            child: Icon(
+              Icons.home,
+              color: Colors.orange,
+              size: 35,
+            ),
           ),
-          Icon(
-            Icons.favorite_outline,
-            color: Colors.orange,
-            size: 35,
+          InkWell(
+            onTap: () {
+            //  Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesScreen()));
+            },
+            child: Icon(
+              Icons.favorite_outline,
+              color: Colors.orange,
+              size: 35,
+            ),
           ),
-          Icon(
-            Icons.notifications,
-            color: Colors.orange,
-            size: 35,
+          InkWell(
+            onTap: () {
+             // Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationsScreen()));
+            },
+            child: Icon(
+              Icons.notifications,
+              color: Colors.orange,
+              size: 35,
+            ),
           ),
-          Icon(
-            Icons.person,
-            color: Colors.orange,
-            size: 35,
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+            },
+            child: Icon(
+              Icons.person,
+              color: Colors.orange,
+              size: 35,
+            ),
           ),
         ],
       ),
