@@ -11,6 +11,8 @@ class SingleItemScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.only(top: 30,bottom: 20),
           child: Column(
@@ -120,12 +122,61 @@ class SingleItemScreen extends StatelessWidget {
                       ),
                     ),
                   SizedBox(height: 20),
-                  Text(
-                    "Volume",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
+                  Row(
+                    children: [
+                      Text(
+                        "Volume",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "60 ml",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:[
+                        Container(
+                          padding: EdgeInsets.symmetric(vertical: 20,horizontal: 50),
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255,50,54,56),
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                          child: Text(
+                            "Add to cart",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: Colors.orange,
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                          child: Icon(
+                            Icons.favorite_outlined,
+                            color: Colors.white,
+                          ), 
+                        ),
+                      ],
                     ),
                   ),
             ],
@@ -134,6 +185,7 @@ class SingleItemScreen extends StatelessWidget {
       ],
     ),
         ),
+      ),
       ),
     );
   }
