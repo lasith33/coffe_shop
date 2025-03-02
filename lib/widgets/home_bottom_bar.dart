@@ -1,4 +1,5 @@
 import 'package:coffe_shop/screen/home_screen.dart';
+import 'package:coffe_shop/screen/profile/favorite_screen.dart';
 import 'package:coffe_shop/screen/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -36,14 +37,18 @@ class HomeBottomBar extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-            //  Navigator.push(context, MaterialPageRoute(builder: (context) => FavoritesScreen()));
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FavoriteScreen()),
+              );
             },
-            child: Icon(
+            child: const Icon(
               Icons.favorite_outline,
               color: Colors.orange,
               size: 35,
             ),
           ),
+
           InkWell(
             onTap: () {
              // Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationsScreen()));

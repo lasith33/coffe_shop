@@ -126,6 +126,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   tabs: [
                 Tab(
                   text: "Hot Coffee"),
+                  
                 Tab(
                   text: "Cold Coffee"),
                 Tab(
@@ -136,6 +137,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               SizedBox(height: 10),
               Center(
                 child: [
+                  ItemsWidget(),
                   ItemsWidget(),
                   ItemsWidget(),
                   ItemsWidget(),
